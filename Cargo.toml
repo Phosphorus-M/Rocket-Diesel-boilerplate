@@ -1,0 +1,14 @@
+[package]
+name = "backend-test"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = "0.4.10"
+chrono = { version = "0.4.19", features = ["serde"] }
+diesel = { version = "1.4.4", features = ["postgres", "chrono"] }
+dotenv = "0.15.0"
+serde = { version = "1.0.130", features = ["derive"]}
+rocket_contrib = "0.4.10"
