@@ -1,7 +1,7 @@
 pub mod date_serializer {
-    use chrono::Utc;
     use chrono::DateTime;
     use chrono::NaiveDateTime;
+    use chrono::Utc;
     use serde::{de::Error, Deserialize, Deserializer, Serialize, Serializer};
 
     fn time_to_json(t: NaiveDateTime) -> String {
