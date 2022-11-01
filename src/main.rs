@@ -8,7 +8,7 @@ extern crate dotenv;
 extern crate diesel;
 
 pub use rocket_okapi::swagger_ui::{make_swagger_ui, SwaggerUIConfig};
-pub use rocket_okapi::{openapi, routes_with_openapi};
+pub use rocket_okapi::{openapi, openapi_get_routes};
 
 pub mod controllers;
 pub mod models;
@@ -28,7 +28,7 @@ fn rocket() -> _ {
     rocket::build()
         .mount(
             "/",
-            routes_with_openapi![
+            openapi_get_routes![
                 post_controller::create,
                 post_controller::get_all,
                 post_controller::update,

@@ -1,20 +1,19 @@
 [package]
 name = "backend-test"
-version = "1.1.0"
-edition = "2018"
+version = "1.1.1"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rocket = { version = "0.5.0-rc.1", features = ["json"] }
-chrono = { version = "0.4.19", features = ["serde"] }
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+chrono = { version = "0.4.22", features = ["serde"] }
 diesel = { version = "1.4.4", features = ["postgres", "chrono"] }
 dotenv = "0.15.0"
-serde = { version = "1.0.130", features = ["derive"]}
-rocket_contrib = "0.4.10"
-serde_derive = "1.0.126"
-serde_json = { version = "1.0.64", features = ["preserve_order"] }
+serde = { version = "1.0.147", features = ["derive"]}
+serde_derive = "1.0.147"
+serde_json = { version = "1.0.87", features = ["preserve_order"] }
 
-schemars = { version = "0.8.0", features = ["chrono", "preserve_order"] }
-okapi = { version = "0.6.0-alpha-1", features = ["derive_json_schema"] }
-rocket_okapi = "0.7.0-alpha-1"
+schemars = { version = "0.8.10", features = ["chrono", "preserve_order"] }
+okapi = { version = "0.7.0-rc.1", features = ["impl_json_schema"] }
+rocket_okapi = { version = "0.8.0-rc.2", features = ["swagger"] }
